@@ -39,9 +39,9 @@ def split_path(filename, pattern):
 
 if __name__ == '__main__':
     file_name = '/path/to/file/filename.csv.gz'
-    print("File Exists:", os.path.exists(input_file))
-    print("IS File:", os.path.isfile(input_file))
-    print("basename:", os.path.basename(input_file)) # gives the filename with extension
-    print("dirname:", os.path.dirname(input_file)) # returns the path to the dir in which file is located
-    print("joined dirname + basename:", os.path.join(os.path.dirname(input_file), os.path.basename(input_file))) # returns same as input_file
+    print("File Exists:", os.path.exists(file_name))
+    print("IS File:", os.path.isfile(file_name))
+    print("basename:", os.path.basename(file_name)) # gives the filename with extension
+    print("dirname:", os.path.dirname(file_name)) # returns the path to the dir in which file is located
+    print("joined dirname + basename:", os.path.join(os.path.dirname(file_name), os.path.basename(file_name))) # returns same as file_name
 
