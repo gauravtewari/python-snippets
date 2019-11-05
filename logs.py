@@ -26,10 +26,10 @@ logging.critical("Critical")
 
 # set logging info
 import logging
-def setup_logging(log_level):
+def setup_logging(log_level, msg_format='%(levelname)s: %(message)s'):
     # deduce the numaric log level from string log level
     log_level_num = getattr(logging, log_level.upper(), None)
     if not isinstance(log_level_num, int):
         raise ValueError('Invalid log level: %s' % log_level)
 
-    logging.basicConfig(format='%(levelname)s: %(message)s', level=log_level_num) # only first call will do soemthing, other calls to basicConfig will be noops
+    logging.basicConfig(format=msg_format, level=log_level_num) # only first call will do soemthing, other calls to basicConfig will be noops
